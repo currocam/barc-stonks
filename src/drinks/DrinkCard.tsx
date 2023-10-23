@@ -13,7 +13,7 @@ export function DrinkCard({ drink, reducePrices }: { drink: Drink, reducePrices:
   return (
     <div className={styles.drinkCard}>
       <div>
-        {drink.name}. Price: {formatPrice(drink.price)}kr. N. of solds: {drink.solds}
+        {drink.name}. Price: {formatPrice(drink.price)}kr. N. of sales: {drink.solds}
         {
           (() => {
             switch (drink.tendency) {
@@ -29,7 +29,7 @@ export function DrinkCard({ drink, reducePrices }: { drink: Drink, reducePrices:
           })()
         }
       </div>
-      <button onClick={handleIncreaseSolds}>Increase Solds</button>
+      <button onClick={handleIncreaseSolds}>Buy</button>
     </div>
   );
 }
